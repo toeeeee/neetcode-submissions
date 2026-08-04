@@ -1,0 +1,13 @@
+class Solution {
+public:
+    bool hasDuplicate(vector<int>& nums) {
+        int size{nums.size()};
+        for (int i{0}; i < size; ++i) {
+            int check{ nums[0] };
+            for (int j{0}; j < size; ++j) {
+                if (i != j && nums[i] == nums[j]) { return true; }
+            }
+        }
+        return false;
+    }
+};
